@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dog vs Cat clasiifier
+        </title>
+    </head>
+    <body style="padding-top: 12em; background-color:pink;">
+        <center>
+        {%with messages = get_flashed_messages() %}
+			{% if messages%}
+				{%for msg in messages%}
+					<h2>{{msg}}</h2>
+				{%endfor%}
+			{%endif%}
+        {%endwith%}
+        <h1>Choose the image to classify as dog or cat</h1>
+        <form class="form-group" action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name = "image" id="image">
+            <button id="submit" name="submit">Predict</button>
+        </form>
+        </center>
+    </body>
+</html>
