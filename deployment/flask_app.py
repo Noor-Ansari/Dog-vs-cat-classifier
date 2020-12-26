@@ -28,11 +28,11 @@ def predict():
         if uploaded_file and allowed_file(uploaded_file.filename):
             image = Image.open(uploaded_file)
             processed_image = model.preprocess_img(image,(224,224))
-            prediction = model.model.predict(processed_image).tolist()
+            prediction = model.model.predict(processed_image)
             print(prediction)
-            dog = prediction[0][0]
-            cat = prediction[0][1]
-            pred = {
+            dog = np.round(prediction[0][0],4)
+            cat = np.round(prediction[0][1],4)
+            pred={
                 'dog':dog,
                 'cat':cat,
             }
@@ -44,4 +44,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
