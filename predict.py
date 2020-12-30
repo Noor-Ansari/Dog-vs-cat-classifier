@@ -1,9 +1,8 @@
-from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow import keras
+from keras.preprocessing.image import img_to_array
+import keras
 from PIL import Image 
-from tensorflow.keras.models import load_model 
+from keras.models import load_model 
 import numpy as np
-
 
 class Predict:
     def __init__(self):
