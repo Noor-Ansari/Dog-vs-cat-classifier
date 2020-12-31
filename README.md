@@ -5,7 +5,7 @@
 
 #### The model has been built using the pre-trained Mobilenet model for better accuracy.
 
-#### You can visit the app at https://dog-vs-cat-classifier.herokuapp.com.
+#### You can visit the app at https://dog-vs-cat-classifier.herokuapp.com
 
 # The working flow of the project :
 
