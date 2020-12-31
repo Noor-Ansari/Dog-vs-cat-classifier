@@ -1,7 +1,6 @@
-from keras.preprocessing.image import img_to_array
-import keras
+from tensoflow.keras.preprocessing.image import img_to_array
 from PIL import Image 
-from keras.models import load_model 
+from tensorflow.keras.models import load_model 
 import numpy as np
 
 class Predict:
@@ -11,5 +10,5 @@ class Predict:
         image = image.resize(target_size)
         image = img_to_array(image)
         image = np.expand_dims(image, axis=0)
-        image = keras.applications.mobilenet.preprocess_input(image)
+        image = tensorflow.keras.applications.mobilenet.preprocess_input(image)
         return image 
