@@ -1,4 +1,4 @@
-from tensoflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image 
 from tensorflow.keras.models import load_model 
 import numpy as np
