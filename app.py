@@ -29,8 +29,8 @@ def predict():
             image = Image.open(uploaded_file)
             processed_image = model.preprocess_img(image,(224,224))
             prediction = model.model.predict(processed_image)
-            dog = np.round(prediction[0][0],4)
-            cat = np.round(prediction[0][1],4)
+            dog = np.round(prediction[0][0])
+            cat = np.round(prediction[0][1])
             pred={
                 'dog':dog,
                 'cat':cat,
