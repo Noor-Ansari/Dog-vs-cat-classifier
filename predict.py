@@ -8,8 +8,8 @@ class Predict:
     def __init__(self):
         self.model = load_model('dog_cat_classifier.h5')
     def preprocess_img(self,image, target_size):
-        image = image.resize(target_size)
-        image = img_to_array(image)
-        image = np.expand_dims(image, axis=0)
-        image = tf.keras.applications.mobilenet.preprocess_input(image)
-        return image 
+        self.image = image.resize(target_size)
+        self.image = img_to_array(self.image)
+        self.image = np.expand_dims(self.image, axis=0)
+        self.image = tf.keras.applications.mobilenet.preprocess_input(self.image)
+        return self.image 
